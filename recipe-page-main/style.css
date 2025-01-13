@@ -1,0 +1,230 @@
+:root{
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-stone-100:hsl(30, 54%, 90%);
+    --clr-stone-150:hsl(30, 18%, 87%);
+    --clr-stone-600:hsl(30, 10%, 34%);
+    --clr-stone-900:hsl(24, 5%, 18%);
+    --clr-brown-800:hsl(14, 45%, 36%);
+    --clr-rose-800:hsl(332, 51%, 32%);
+    --clr-rose-50:hsl(330, 100%, 98%);
+
+    --fw-regular:400;
+    --fw-bold_1:600;
+    --fw-bold_2:700;
+    --ff-base:"Outfit", serif;
+    --ff-assent:"Young Serif", serif;
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    font-family: var(--ff-assent);
+  }
+
+  body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-stone-600);
+    background-color: var(--clr-white);
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+  }
+
+  /* recipe */
+
+  .recipe {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 2rem;
+  }
+
+  .recipe_tittle {
+    font-size: 2rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-stone-900);
+  }
+
+  /* recipe_prep */
+  .recipe_prep{
+    background-color: var(--clr-rose-50);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction:column ;
+    flex-wrap: wrap;
+    gap:0.8rem;
+  }
+
+  .recipe_prep p {
+    font-size: 1.2rem;
+    font-weight:var(--fw-bold_2);
+    color: var(--clr-rose-800);
+  }
+  .recipe_prep li{
+    margin-bottom: 0.5rem;
+  }
+
+  .recipe_prep li::marker {
+    color: var(--clr-rose-800);
+    
+
+  }
+
+  /* recipe_ingrediants */
+
+  .recipe_ingrediants {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .recipe_ingrediants h3{
+    font-weight: var(--fw-regular);
+    color: var(--clr-brown-800);
+    font-size: 1.7rem;
+  }
+
+  .recipe_ingrediants li {
+    margin-bottom: 0.5rem;
+  }
+
+ 
+  hr {
+    border: none;
+    height:0.12rem;
+    background-color: var(--clr-stone-150);
+  }
+
+  /* recipe_instructions */
+
+  .recipe_instruction {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .recipe_instruction h3{
+    font-weight: var(--fw-regular);
+    color: var(--clr-brown-800);
+    font-size: 1.7rem;
+  }
+
+  .recipe_instruction li {
+    margin-bottom: 0.5rem;
+  }
+ 
+  .recipe_instruction li::marker,.recipe_ingrediants li::marker {
+    color: var(--clr-brown-800);
+    font-weight: var(--fw-bold_1);
+  }
+
+  /* recipe_nutrition */
+
+  .recipe_nutrition {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .recipe_nutrition h3{
+    font-weight: var(--fw-regular);
+    color: var(--clr-brown-800);
+    font-size: 1.7rem;
+  }
+
+  .recipe_nutrition li {
+    line-height: 1.8;
+  }
+
+  .nutrition_table {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nutrition_table .row {
+   display: flex;
+   padding-left:2rem ;
+  }
+  .nutrition_table .row > * {
+    width: 50%;
+    margin-right: auto;
+  }
+
+  .row .value {
+    font-weight: var(--fw-bold_1);
+    color: var(--clr-brown-800);
+  }
+
+@media screen and (min-width:1080px) {
+
+  body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
+    color: var(--clr-stone-600);
+    background-color: var(--clr-stone-100);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .recipe_section {
+    max-width: 60%;
+    background-color: var(--clr-white);
+    margin-top: 5rem;
+    margin-bottom:5rem;
+    border-radius: 2rem;
+  }
+  img {
+    display: block;
+    max-width: 91%;
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: 1rem;
+  }
+  .recipe_tittle {
+    font-size: 2.8rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-stone-900);
+  }
+}
